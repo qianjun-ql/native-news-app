@@ -1,0 +1,64 @@
+{
+    "articles": [
+      {
+        "article_id": "1",
+        "title": "Exploring Advances in Renewable Energy",
+        "link": "https://example.com/renewable-energy",
+        "keywords": ["renewable energy", "solar power", "innovation"],
+        "creator": null,
+        "video_url": null,
+        "description": "A deep dive into the latest trends and technologies in renewable energy.",
+        "content": "The world of renewable energy is rapidly evolving with new technologies promising to revolutionize power consumption...",
+        "pubDate": "2024-10-28T12:34:56Z",
+        "image_url": "https://example.com/images/renewable.jpg",
+        "source_id": "123",
+        "source_priority": 1,
+        "source_name": "Eco News",
+        "source_url": "https://eco-news.com",
+        "source_icon": "https://example.com/icons/eco-news.png",
+        "language": "en",
+        "country": ["US"],
+        "category": ["Science", "Technology"],
+        "ai_tag": ["solar", "sustainability"],
+        "ai_region": ["North America"],
+        "ai_org": null,
+        "sentiment": "positive",
+        "sentiment_stats": {
+          "positive": 75,
+          "neutral": 20,
+          "negative": 5
+        },
+        "duplicate": false
+      },
+      {
+        "article_id": "2",
+        "title": "Global Political Shifts and Their Impact",
+        "link": "https://example.com/political-shifts",
+        "keywords": ["politics", "global", "elections"],
+        "creator": null,
+        "video_url": null,
+        "description": "An analysis of recent global political shifts and their potential impacts around the world.",
+        "content": "In recent years, global politics have seen dramatic shifts with significant elections and policy changes...",
+        "pubDate": "2024-10-27T08:00:00Z",
+        "image_url": "https://example.com/images/politics.jpg",
+        "source_id": "456",
+        "source_priority": 2,
+        "source_name": "Global Times",
+        "source_url": "https://globaltimes.com",
+        "source_icon": "https://example.com/icons/global-times.png",
+        "language": "en",
+        "country": ["GB", "US"],
+        "category": ["Politics"],
+        "ai_tag": ["elections", "policy"],
+        "ai_region": ["Europe", "North America"],
+        "ai_org": null,
+        "sentiment": "neutral",
+        "sentiment_stats": {
+          "positive": 50,
+          "neutral": 30,
+          "negative": 20
+        },
+        "duplicate": false
+      }
+    ]
+  }
