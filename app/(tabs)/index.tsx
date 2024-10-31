@@ -34,7 +34,7 @@ const Page = (props: Props) => {
     <View style={[styles.container, { paddingTop: safeTop }]}>
       <Header />
       <SearchBar />
-      <BreakingNews />
+      <BreakingNews newsList={breakingNews}/>
     </View>
   );
 };

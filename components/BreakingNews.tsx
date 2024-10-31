@@ -1,13 +1,23 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 import React from "react";
 import { Colors } from "@/constants/Colors";
+import { NewsDataType } from "@/types";
+import SliderItem from "./SliderItem";
 
-type Props = {};
+type Props = {
+  newsList: Array<NewsDataType>;
+};
 
-const BreakingNews = (props: Props) => {
+const BreakingNews = ({ newsList }: Props) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>BreakingNews</Text>
+      <Text style={styles.title}>Breaking News</Text>、
+      <View style={styles.slideWrapper}></View>
+      <FlatList
+        data={newsList}
+        keyExtractor={(_, index) => `list_item${index}`}
+        renderItem={({ item, index }) => <SliderItem />}
+      />
     </View>
   );
 };
@@ -22,5 +32,10 @@ const styles = StyleSheet.create({
     color: Colors.black,
     marginBottom: 20,
     marginLeft: 20,
+  },
+  slideWrapper: {
+    width: "100%",
+    flex: 1,
+    justifyContent: "center",
   },
 });
