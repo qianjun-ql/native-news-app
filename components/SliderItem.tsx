@@ -1,7 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { NewsDataType } from '@/types'
 
-type Props = {}
+type Props = {
+  slideItem: NewsDataType
+}
 
 const SliderItem = (props: Props) => {
   return (
