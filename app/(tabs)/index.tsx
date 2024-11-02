@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Header from "@/components/Header";
@@ -12,6 +12,7 @@ type Props = {};
 const Page = (props: Props) => {
   const { top: safeTop } = useSafeAreaInsets();
   const [breakingNews, setBreakingNews] = useState<NewsDataType[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getBreakingNews();
@@ -21,11 +22,13 @@ const Page = (props: Props) => {
     try {
       const URL = "http://localhost:3000/articles";
       const response = await axios.get<NewsDataType[]>(URL);
+      console.log(response);
 
       if (response && response.data) {
         setBreakingNews(response.data);
+        setIsLoading(false);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
     }
   };
@@ -34,7 +37,11 @@ const Page = (props: Props) => {
     <View style={[styles.container, { paddingTop: safeTop }]}>
       <Header />
       <SearchBar />
-      <BreakingNews newsList={breakingNews}/>
+      {isLoading ? (
+        <ActivityIndicator size={"large"} />
+      ) : (
+        <BreakingNews newsList={breakingNews} />
+      )}
     </View>
   );
 };
