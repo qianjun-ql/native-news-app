@@ -9,7 +9,7 @@ type Props = {
 const SliderItem = (props: Props) => {
   return (
     <View>
-      <Text></Text>
+      <Text>Test</Text>
     </View>
   )
 }
