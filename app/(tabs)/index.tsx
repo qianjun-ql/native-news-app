@@ -20,7 +20,8 @@ const Page = (props: Props) => {
 
   const getBreakingNews = async () => {
     try {
-      const URL = "http://localhost:3000/articles";
+      // const URL = `${API_URL}/articles`;
+      const URL = "http://192.168.1.5:3000/articles";
       const response = await axios.get<NewsDataType[]>(URL);
       console.log(response);
 
